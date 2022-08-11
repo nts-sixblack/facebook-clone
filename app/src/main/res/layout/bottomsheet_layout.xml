@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg">
+
+    <LinearLayout
+        android:id="@+id/layout_anh"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:weightSum="12"
+        android:orientation="horizontal">
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:drawablePadding="20dp"
+            android:paddingLeft="15dp"
+            android:drawableLeft="@drawable/ic_baseline_image_24" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Ảnh/Video"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_weight="10"
+            android:gravity="left|center"
+            android:paddingLeft="10dp"/>
+
+    </LinearLayout>
+     <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+
+
+            <LinearLayout
+                android:id="@+id/layout_ganthe"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_people_alt_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Gắn thẻ người khác"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:id="@+id/layout_camxuc"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_insert_emoticon_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Cảm xúc/Hoạt động"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:id="@+id/layout_checkin"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_place_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Check in "
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:id="@+id/layout_video"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_videocam_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Video trực tiếp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:id="@+id/layout_mau"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_text_format_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Màu"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:id="@+id/layout_camera"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_photo_camera_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Camera"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:id="@+id/layout_file"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_gif_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="File GIF"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:id="@+id/layout_meet"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_mic_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Tổ chức buổi HĐ"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+
+
+</LinearLayout>

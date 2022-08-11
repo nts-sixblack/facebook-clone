@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Facebook</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home_fragment">Home fragment</string>
+    <string name="video_fragment">Second fragment</string>
+    <string name="shop_fragment">Third fragment</string>
+    <string name="game_fragment">Third fragment</string>
+    <string name="notice_fragment">Third fragment</string>
+    <string name="menu_fragment">Third fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="story_fragment">Story fragment</string>
+    <string name="moive_fragment">Movie fragment</string>
+    <string name="bottom_sheet">Bottom </string>
+
+
+</resources>

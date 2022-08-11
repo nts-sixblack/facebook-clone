@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/avtHome_ctnComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@color/bootstrap_brand_secondary_border"
+        android:gravity="end"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/home_headCMT"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+
+                android:weightSum="12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="11"
+                    android:text="Bình luận"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/bts_close"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_gravity="left"
+                    app:srcCompat="@drawable/comment_blue" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bts_list_cmt"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:maxHeight="650dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_headCMT" />
+
+
+            <LinearLayout
+                android:id="@+id/inpcmt"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/bootstrap_brand_secondary_fill"
+                android:backgroundTint="@color/bootstrap_brand_secondary_fill"
+                android:elevation="10dp"
+                android:foregroundGravity="bottom"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.beardedhen.androidbootstrap.BootstrapEditText
+                    android:id="@+id/bts_ipcmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="15"
+                    android:hint="Hãy nhập bình luận của bạn"
+                    app:bootstrapBrand="success"
+                    app:bootstrapSize="sm"
+                    app:roundedCorners="true">
+
+                </com.beardedhen.androidbootstrap.BootstrapEditText>
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/bts_sendcmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Gửi"
+                    app:bootstrapBrand="primary"
+                    app:bootstrapSize="xl"
+                    app:buttonMode="regular"
+                    app:fontAwesomeIcon="fa_send"
+                    app:roundedCorners="true"
+                    app:showOutline="true" />
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

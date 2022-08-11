@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android Project/Facebook/app/src/main/res/layout/activity_detail_news_items2.xml" value="0.264" />
+        <entry key="..\:/Android Project/Facebook/app/src/main/res/layout/activity_story.xml" value="0.1490036231884058" />
+        <entry key="..\:/Android Project/Facebook/app/src/main/res/layout/activity_upload_picture.xml" value="0.1490036231884058" />
+        <entry key="..\:/Android Project/Facebook/app/src/main/res/layout/activity_your_profile.xml" value="0.264" />
+        <entry key="..\:/Android Project/Facebook/app/src/main/res/layout/fragment_second.xml" value="0.1490036231884058" />
+        <entry key="..\:/Android Project/Facebook/app/src/main/res/layout/fragment_story.xml" value="0.1490036231884058" />
+        <entry key="..\:/Android Project/Facebook/app/src/main/res/layout/item_pile.xml" value="0.1490036231884058" />
+        <entry key="..\:/Android Project/Facebook/app/src/main/res/layout/news_items.xml" value="0.264" />
+        <entry key="..\:/Android Project/Facebook/app/src/main/res/layout/video_items.xml" value="0.1490036231884058" />
+        <entry key="..\:/Android Project/Facebook/app/src/main/res/layout/video_items_v2.xml" value="0.1490036231884058" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="15" project-jdk-type="JavaSDK" />
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>

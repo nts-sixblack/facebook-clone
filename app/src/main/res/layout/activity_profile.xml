@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.widget.Toolbar
+            android:id="@+id/toolbar_my_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            tools:ignore="MissingConstraints">
+
+            <EditText
+                android:id="@+id/edt_search_my_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/search_styles"
+                android:hint="Tìm kiếm"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:inputType="text"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="15dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="11dp"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </android.widget.Toolbar>
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/profile_imgpage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="60dp"
+            android:outlineSpotShadowColor="@color/bootstrap_gray"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sky"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius_bottom_left="35dp"
+            app:riv_corner_radius_bottom_right="35dp" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imgComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.464"
+            app:layout_constraintStart_toStartOf="@+id/profile_imgpage"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
+                android:id="@+id/imgAvaProfile"
+                android:layout_width="162dp"
+                android:layout_height="157dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="168dp"
+                android:src="@drawable/sky"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="sm"
+                app:hasBorder="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/profile_imgChangeAvt"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="-1dp"
+                android:elevation="10dp"
+                android:src="@drawable/ic_baseline_camera_alt_24"
+                app:cb_color="#CCCCCC"
+                app:layout_constraintBottom_toBottomOf="@+id/imgAvaProfile"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+
+            android:id="@+id/nameProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Hồng Hạnh"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgComment" />
+
+        <LinearLayout
+            android:id="@+id/Trangthai"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:weightSum="12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameProfile">
+
+
+           <com.beardedhen.androidbootstrap.BootstrapButton
+               android:layout_width="300dp"
+               android:layout_height="30dp"
+               android:layout_margin="5dp"
+               android:layout_weight="10"
+               android:paddingLeft="5dp"
+               android:text="Đặt trạng thái"
+               android:drawableLeft="@drawable/ic_baseline_tag_faces_24"
+               app:bootstrapBrand="primary"
+               app:bootstrapSize="md"
+               app:roundedCorners="true"/>
+
+            <ImageButton
+                android:id="@+id/btn_more_options"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="-3dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/bootstrap_gray"
+                android:src="@drawable/ic_baseline_more_horiz_24" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Trangthai" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_baseline_home_work_24"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="10dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="11"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"
+                    android:text="Sống tại Đà Nẵng"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+
+                android:weightSum="12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_baseline_access_time_filled_24"
+                    android:drawablePadding="5dp"
+                    android:paddingLeft="10dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="11"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"
+                    android:text="Tham gia vào Tháng 3 năm 2016"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+
+                android:weightSum="12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_baseline_assignment_turned_in_24"
+                    android:drawablePadding="5dp"
+                    android:paddingLeft="10dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="11"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"
+                    android:text="Có 384 người theo dõi"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+
+                android:weightSum="12">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_baseline_more_horiz_25"
+                    android:drawablePadding="5dp"
+                    android:paddingLeft="10dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="11"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"
+                    android:text="Xem thông tin giới thiệu của bạn"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/btnEdit"
+                android:layout_width="430dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:text="Chỉnh sửa chi tiết công khai"
+                android:textColor="#3126DA"
+                app:bootstrapBrand="info"
+                app:bootstrapSize="md"
+                app:roundedCorners="true" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEdit" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginTop="15dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEdit" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:weightSum="12">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Bài viết"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="12dp"/>
+
+
+                <ImageButton
+                    android:layout_width="64dp"
+                    android:layout_height="17dp"
+                    android:layout_weight="5"
+                    android:background="#8E8B8B"
+                    android:drawableLeft="@drawable/ic_baseline_scanner_24"
+                    android:paddingLeft="23dp" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="#8E8B8B"
+                    android:drawableLeft="@drawable/ic_baseline_settings_24"
+                    android:paddingLeft="23dp"
+                    />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:weightSum="12">
+
+
+                <com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
+                    android:id="@+id/avaProfile"
+                    android:layout_width="250dp"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="8"
+                    android:src="@drawable/sky" />
+
+                <TextView
+                    android:id="@+id/txtNewThinks"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="4"
+                    android:gravity="left"
+                    android:hint="Bạn đang nghĩ gì"
+                    android:textSize="15sp" />
+
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:weightSum="12">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/ic_baseline_missed_video_call_20"
+                        android:layout_weight="4"
+                        android:text="Phát trực tiếp"
+                        android:gravity="center"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="14sp"
+                        android:textColor="#383839"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/ic_baseline_image_20"
+                    android:layout_weight="4"
+                    android:text="Ảnh"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="14sp"
+                    android:textColor="#383839"/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/ic_baseline_flag_20"
+                    android:layout_weight="4"
+                    android:text="Sự kiện trong đời"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="14sp"
+                    android:textColor="#383839"/>
+
+
+
+
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginTop="15dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEdit" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvNewsProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+            </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>

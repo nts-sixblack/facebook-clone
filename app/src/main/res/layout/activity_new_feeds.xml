@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewFeeds">
+
+
+    <com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
+        android:id="@+id/bootstrapCircleThumbnail"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/facebook1"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="sm"
+        app:hasBorder="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.beardedhen.androidbootstrap.AwesomeTextView
+        android:id="@+id/awesomeTextView2"
+        android:layout_width="107dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="16dp"
+        android:text="Hồng Hạnh"
+        android:textSize="18sp"
+        app:bootstrapBrand="primary"
+        app:layout_constraintStart_toEndOf="@+id/bootstrapCircleThumbnail"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="45dp"
+        android:orientation="horizontal"
+        android:weightSum="12">
+
+<!--        <com.beardedhen.androidbootstrap.BootstrapDropDown-->
+<!--            android:id="@+id/bootstrapDropDown"-->
+<!--            android:layout_width="104dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginTop="3dp"-->
+<!--            android:layout_weight="4"-->
+<!--            app:bootstrapBrand="primary"-->
+<!--            app:bootstrapExpandDirection="down"-->
+<!--            app:bootstrapSize="xs"-->
+<!--            app:bootstrapText="{fa_globe}  Công khai "-->
+<!--            app:itemHeight="35dp"-->
+<!--            app:roundedCorners="true"-->
+<!--            app:showOutline="true"-->
+<!--            app:typicon="ty_adjust_brightness" />-->
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/bootstrapEditText2"
+        android:layout_width="411dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Bạn đang nghĩ gì"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bootstrapCircleThumbnail" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="400dp">
+
+
+
+        <LinearLayout
+            android:layout_width="411dp"
+            android:layout_height="505dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bootstrapEditText2" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:weightSum="12">
+
+                <Button
+                    android:id="@+id/button_sheet"
+                    android:layout_width="match_parent"
+                    android:background="#FAFFFCFC"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:drawableTop="@drawable/ic_baseline_expand_less_24" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_image_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Ảnh/Video"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+
+            </LinearLayout>
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_people_alt_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Gắn thẻ người khác"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_insert_emoticon_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Cảm xúc/Hoạt động"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_place_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Check in "
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_videocam_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Video trực tiếp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_text_format_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Màu"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_photo_camera_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Camera"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_gif_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="File GIF"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:weightSum="12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawablePadding="20dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/ic_baseline_mic_24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Tổ chức buổi HĐ"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_weight="10"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

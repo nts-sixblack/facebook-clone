@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <android.widget.Toolbar
+            android:id="@+id/toolbar_create_album"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            app:titleTextColor="@android:color/white"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/toolbar_create_album_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Tạo album"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="149dp"
+                tools:layout_editor_absoluteY="14dp" />
+
+            <TextView
+                android:id="@+id/tv_submit_created_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="20dp"
+                android:text="TẠO"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+        </android.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tên album"
+                android:background="@null"
+                android:textSize="20dp"
+                android:layout_margin="15dp"
+                android:textColor="@color/black"/>
+
+            <View style="@style/Divider" />
+
+            <Spinner
+                android:id="@+id/spn_create_album_view_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:textSize="20dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp" />
+
+            <View style="@style/Divider" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

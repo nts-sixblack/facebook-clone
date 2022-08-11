@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rc_friends"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="0dp">
+
+        <com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
+            android:id="@+id/Fr_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/sky"
+            app:bootstrapBrand="danger"
+            app:bootstrapSize="sm"
+            app:hasBorder="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <at.markushi.ui.CircleButton
+            android:id="@+id/profile_imgChangeAvt"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="-5dp"
+            android:src="@drawable/ic_baseline_people_alt_24"
+            app:cb_color="@color/bootstrap_dropdown_divider"
+            app:layout_constraintBottom_toBottomOf="@+id/Fr_img"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:paddingLeft="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="12">
+
+            <TextView
+                android:id="@+id/fr_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="12"
+                android:fontFamily="sans-serif-black"
+                android:text="da gui loi moi ket ban"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fr_time"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto"
+            android:text="aaa"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="12">
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:layout_weight="6"
+                android:text="Chấp nhận"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="md"
+                app:roundedCorners="true" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:layout_weight="6"
+                android:text="Xóa"
+                app:bootstrapBrand="regular"
+                app:bootstrapSize="md"
+                app:roundedCorners="true" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

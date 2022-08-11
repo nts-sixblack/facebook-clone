@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".DetailNewsItems2Activity">
+
+    <LinearLayout
+        android:id="@+id/constraintLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:background="#00100F0F"
+        android:elevation="10dp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:src="@drawable/ic_baseline_more_vert_24_white" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/ImgDetail"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sky"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7"
+        app:layout_constraintVertical_bias="0.492"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00100F0F"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txtNameDetail2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto"
+            android:paddingLeft="10dp"
+            android:text="Hồng Hạnh"
+            android:textColor="@color/bootstrap_brand_secondary_fill"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtContentDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="11dp"
+            android:text="Rõ ràng"
+            android:textColor="@color/bootstrap_brand_secondary_fill"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNameDetail2" />
+
+        <TextView
+            android:id="@+id/txtTimeDetail2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/roboto_thin"
+            android:paddingLeft="10dp"
+            android:text="2 GIỜ TRƯỚC"
+            android:textColor="@color/bootstrap_brand_secondary_fill"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNameDetail2" />
+
+
+        <LinearLayout
+            android:id="@+id/lineLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="12"
+            app:layout_constraintTop_toBottomOf="@+id/txtTimeDetail2">
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:drawableLeft="@drawable/ic_baseline_favorite_30_red"
+                    android:drawablePadding="5dp"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:text="hồng hạnh và 3 người khác"
+                    android:textColor="@color/white" android:id="@+id/txtCountLike"/>
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="end|center"
+                    android:paddingEnd="10dp"
+                    android:text="10 bình luận"
+                    android:textColor="@color/white" android:id="@+id/txtCountComment"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/lineLayout1"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="12"
+            app:layout_constraintTop_toBottomOf="@+id/divider1">
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/dtn2A_btnLike"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="#03818A91"
+                android:backgroundTint="#00100F0F"
+                android:drawablePadding="-5dp"
+                android:paddingLeft="15dp"
+                android:textSize="20sp"
+                app:bootstrapSize="xl"
+                app:bootstrapBrand="danger"
+                app:bootstrapText="{fa_heart} like" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/dtn2A_btncomment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="#03818A91"
+                android:backgroundTint="#00100F0F"
+                android:drawablePadding="-5dp"
+                android:textSize="20sp"
+                app:bootstrapSize="xl"
+                android:paddingLeft="15dp"
+                app:bootstrapBrand="primary"
+                app:bootstrapText="{fa_comment} comment" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/dtn2A_btnshare"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="#03818A91"
+                android:backgroundTint="#00100F0F"
+                android:drawablePadding="-5dp"
+                android:textSize="20sp"
+                app:bootstrapSize="xl"
+                android:paddingLeft="15dp"
+                app:bootstrapBrand="danger"
+                app:bootstrapText="{fa_share} share" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

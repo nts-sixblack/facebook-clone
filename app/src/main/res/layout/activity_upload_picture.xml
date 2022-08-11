@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadPictureActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/edit_profile_divider_1"
+        tools:ignore="MissingConstraints">
+
+        <android.widget.Toolbar
+            android:id="@+id/toolbar_upload_picture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            app:titleTextColor="@android:color/white"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/toolbar_upload_picture_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Tạo bài viết"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="149dp"
+                tools:layout_editor_absoluteY="14dp" />
+
+            <TextView
+                android:id="@+id/tv_submit_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="20dp"
+                android:text="ĐĂNG"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+        </android.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upload_picture_toolbar"
+            tools:ignore="MissingConstraints">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_avatar"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            app:cardCornerRadius="30dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/img_avatar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/sky" />
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_user_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="20dp"
+                                android:text="Six Black"
+                                android:textColor="@color/black"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/cv_avatar"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="15dp"
+                                android:layout_marginBottom="-5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                tools:layout_editor_absoluteX="95dp">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Spinner
+                                        android:id="@+id/spn_edit_profile_view_mode"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:background="@drawable/spinner_styles"
+                                        android:paddingHorizontal="8dp"
+                                        android:paddingTop="5.75dp"
+                                        android:paddingBottom="6dp" />
+
+                                    <Button
+                                        android:id="@+id/btn_edit_profile_add_album"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="45dp"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="-6dp"
+                                        android:backgroundTint="@color/bootstrap_gray"
+                                        android:paddingHorizontal="10dp"
+                                        android:text="Album"
+                                        android:textSize="16sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/btn_my_profile_view_mode" />
+
+                                </LinearLayout>
+                            </HorizontalScrollView>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="20dp">
+
+                    <EditText
+                        android:id="@+id/edt_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Bạn đang nghĩ gì..."
+                        android:inputType="textMultiLine"
+                        android:scrollbars="vertical"
+                        android:text=""
+                        android:textSize="22dp" />
+                </ScrollView>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="52dp">
+
+                    <ImageView
+                        android:id="@+id/img_from_gallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true" />
+
+                    <ImageButton
+                        android:id="@+id/btn_remove_picture"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="end"
+                        android:background="#00000000"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_baseline_close_24_white"/>
+
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_show_background_status_bar"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#D50960"
+        app:layout_constraintBottom_toTopOf="@id/edit_profile_divider_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_text_fields_24_white"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/layout_background_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintBottom_toTopOf="@id/edit_profile_divider_1"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/btn_hide_background_status_bar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="-1dp"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_new_24_white" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_background_status"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:paddingVertical="6dp"
+            android:layout_weight="1">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="-1dp"
+            app:srcCompat="@drawable/ic_baseline_apps_24_white" />
+    </LinearLayout>
+
+
+    <View android:id="@+id/edit_profile_divider_1"
+        style="@style/Divider"
+        app:layout_constraintBottom_toTopOf="@id/layout_upload_picture_add"
+        tools:ignore="MissingConstraints" />
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_upload_picture_add"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/edit_profile_divider_2"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/img_upload_picture_add_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingVertical="10dp"
+            app:srcCompat="@drawable/ic_baseline_photo_library_24_green" />
+
+        <ImageView
+            android:id="@+id/img_upload_picture_add_tag_person"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingVertical="10dp"
+            app:srcCompat="@drawable/ic_baseline_person_2_24_dark_blue" />
+
+        <ImageView
+            android:id="@+id/img_upload_picture_add_emotion"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingVertical="10dp"
+            app:srcCompat="@drawable/ic_baseline_tag_faces_24_yellow_orange" />
+
+        <ImageView
+            android:id="@+id/img_upload_picture_add_location"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingVertical="10dp"
+            app:srcCompat="@drawable/ic_baseline_location_on_24_red" />
+
+        <ImageView
+            android:id="@+id/img_upload_picture_more_add_options"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingVertical="10dp"
+            app:srcCompat="@drawable/ic_baseline_more_horiz_24_dark_gray" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/edit_profile_divider_2"
+        style="@style/Divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
